@@ -11,6 +11,7 @@
 		B33A527229FBDA51007DD2A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A527129FBDA51007DD2A0 /* ContentView.swift */; };
 		B33A527429FBDA52007DD2A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33A527329FBDA52007DD2A0 /* Assets.xcassets */; };
 		B33A527729FBDA52007DD2A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33A527629FBDA52007DD2A0 /* Preview Assets.xcassets */; };
+		B33A528429FBDC30007DD2A0 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A528329FBDC30007DD2A0 /* NotesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B33A527129FBDA51007DD2A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B33A527329FBDA52007DD2A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33A527629FBDA52007DD2A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B33A528329FBDC30007DD2A0 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,9 @@
 		B33A526E29FBDA51007DD2A0 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				B33A528229FBDC02007DD2A0 /* ViewModels */,
+				B33A528129FBDBF8007DD2A0 /* Views */,
+				B33A528029FBDBE2007DD2A0 /* Models */,
 				B33A526F29FBDA51007DD2A0 /* ToDoListApp.swift */,
 				B33A527129FBDA51007DD2A0 /* ContentView.swift */,
 				B33A527329FBDA52007DD2A0 /* Assets.xcassets */,
@@ -65,6 +70,28 @@
 				B33A527629FBDA52007DD2A0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B33A528029FBDBE2007DD2A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B33A528329FBDC30007DD2A0 /* NotesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B33A528129FBDBF8007DD2A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B33A528229FBDC02007DD2A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			files = (
 				B33A527229FBDA51007DD2A0 /* ContentView.swift in Sources */,
 				B33A527029FBDA51007DD2A0 /* ToDoListApp.swift in Sources */,
+				B33A528429FBDC30007DD2A0 /* NotesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
