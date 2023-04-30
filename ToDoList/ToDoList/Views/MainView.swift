@@ -17,6 +17,7 @@ struct ContentView: View {
     }
     
     @State var descriptionNote: String = ""
+    @StateObject var notesViewModel = NotesViewModel()
     
     var body: some View {
         NavigationStack {
@@ -35,15 +36,27 @@ struct ContentView: View {
                     .padding(.horizontal, 12)
                     .cornerRadius(3.0)
                 Button("Crear Nota") {
+                    notesViewModel.saveNote(description: descriptionNote)
                     descriptionNote = ""
                 }
                 .buttonStyle(.bordered)
                 .tint(.green)
                 Spacer()
+                
+                List {
+                    ForEach(notesViewModel.notes, id: \.id) { nota in
+                        HStack {
+                            Text(nota.description)
+                        }
+                    }
+                }
+                .background(.black)
+                .scrollContentBackground(.hidden)
+            
             }
             .navigationTitle("TO-DO-LIST")
             .navigationBarTitleDisplayMode(.inline)
-            .background(.black)
+            .background( .black, ignoresSafeAreaEdges: .all)
         }
     }
 }
