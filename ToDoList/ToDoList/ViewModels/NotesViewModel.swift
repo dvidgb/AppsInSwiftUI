@@ -33,6 +33,10 @@ final class NotesViewModel: ObservableObject {
         encodeAndSaveAllNotes()
     }
     
+    func getNumberOfNotes() -> String {
+        "\(notes.count)"
+    }
+    
     private func encodeAndSaveAllNotes() {
         if let encoded =  try? JSONEncoder().encode(notes) {
             userDefaults.set(encoded, forKey: "notes")

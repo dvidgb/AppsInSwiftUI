@@ -75,6 +75,9 @@ struct ContentView: View {
             }
             .navigationTitle("TO-DO-LIST")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                Text(notesViewModel.getNumberOfNotes())
+            }.foregroundColor(.green)
             .background( .black, ignoresSafeAreaEdges: .all)
         }
     }
