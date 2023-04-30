@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    
+    init() {
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
     
     @State var descriptionNote: String = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("Añade una tarea")
                     .underline()
@@ -35,6 +42,7 @@ struct ContentView: View {
             }
             .navigationTitle("TO-DO-LIST")
             .navigationBarTitleDisplayMode(.inline)
+            .background(.black)
         }
     }
 }
