@@ -44,9 +44,28 @@ struct ContentView: View {
                 Spacer()
                 
                 List {
-                    ForEach(notesViewModel.notes, id: \.id) { nota in
+                    ForEach($notesViewModel.notes, id: \.id) { $nota in
                         HStack {
+                            if nota.isFavorited {
+                                Text("🌟")
+                            }
                             Text(nota.description)
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button {
+                                notesViewModel.updateFavoriteNote(note: $nota)
+                            } label: {
+                                Label("Favorito", systemImage: "star.fill")
+                            }
+                            .tint(.yellow)
+                        }
+                        .swipeActions(edge: .leading){
+                            Button {
+                                notesViewModel.removeNote(withId: nota.id)
+                            } label: {
+                                Label("Borrar", systemImage: "trash.fill")
+                            }
+                            .tint(.red)
                         }
                     }
                 }
